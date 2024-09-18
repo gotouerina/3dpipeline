@@ -28,7 +28,7 @@ Pipeline for 3dgenome analysis
 
 生成不同分辨率的mcool文件
 
-    cooler zoomify ref.cool
+    cooler zoomify ref.cool --nproc 50 
 
 这一步可选分辨率
 
