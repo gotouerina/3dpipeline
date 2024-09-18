@@ -7,7 +7,7 @@ Pipeline for 3dgenome analysis
 
 再比对
 
-    chromap --preset hic -r ref.fasta -x index R1.fq.gz -2 R2.fq.gz -t 50 -o aln.pairs
+    chromap --preset hic -r ref.fasta -x index R1.fq.gz -2 R2.fq.gz -t 50 -o aln.pairs  #RAM 20G
 
 输出的是pair格式，pair格式再load进cooler, cooler一行pip就能装，如果环境冲突了conda弄一个新的python环境
 
