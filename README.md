@@ -19,18 +19,8 @@ Pipeline for 3dgenome analysis
 
     pairix aln.pairs.gz #生成一个后缀为px2的索引文件
 
-    cooler cload pairix ref.chrome.size:50000 aln.pairs.gz ref.cool #这一步需要索引，需要用pairix建,没有索引可以用 cooler cload pairs
+    cooler cload pairix ref.chrome.size:50000 aln.pairs.gz ref.cool -p 50#这一步需要索引，需要用pairix建,没有索引可以用 cooler cload pairs
    
-
-标准化
-
-    cooler balance ref.cool
-
-生成不同分辨率的mcool文件
-
-    cooler zoomify ref.cool --nproc 50 
-
-这一步可选分辨率
 
 下游的分析考虑用hicexplorer做一下， hicexplore应该可以同时做AB区室， loop， TAD这三大件。hicexplorer读取的事h5格式，所以需要先做一下格式转化
 
