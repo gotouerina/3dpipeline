@@ -36,7 +36,12 @@ Pipeline for 3dgenome analysis
 
     hicConvertFormat --matrices ref.cool --outFileName ref.h5 --inputFormat {h5,cool,hic,homer,hicpro,2D-text} --outputFormat  {cool,h5,homer,ginteractions,mcool,hicpro}
 
-把标准化后的cool格式转成h5格式就行，好像cool格式也可以直接读取，不用转，试试看
+把标准化后的cool格式转成h5格式就行
+
+#    标准化
+
+        hicCorrectMatrix correct  --matrix cahirinus.h5 --filterThreshold -1.5 5 -o hic_corrected.h5
+
 
 #    一、A/B区室
     hicPCA -m hic_corrected.h5 --outFileName pca1.bw pca2.bw --format bigwig --pearsonMatrix pearson.h5
