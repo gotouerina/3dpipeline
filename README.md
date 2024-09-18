@@ -19,7 +19,8 @@ Pipeline for 3dgenome analysis
 
     pairix aln.pairs.gz
 
-    cooler cload pairix ref.chrome.size:50000 aln.pairs.gz ref.cool #这一步需要索引，需要用pairix建
+    cooler cload pairix ref.chrome.size:50000 aln.pairs.gz ref.cool #这一步需要索引，需要用pairix建,没有索引可以用 cooler cload pairs
+   
 
 标准化
 
