@@ -40,12 +40,12 @@ OUTFILENAME [OUTFILENAME ...] --inputFormat
 
 把标准化后的cool格式转成h5格式就行，好像cool格式也可以直接读取，不用转，试试看
 
-#一、A/B区室
+#    一、A/B区室
     hicPCA -m hic_corrected.h5 --outFileName pca1.bw pca2.bw --format bigwig --pearsonMatrix pearson.h5
 这里第一主成分是区室，需要根据基因密度或者GC校正一下符号
 
-#二、找TAD
+#    二、找TAD
     hicFindTADs -m hic_corrected.h5 --outPrefix hic_corrected --numberOfProcessors 16
 
-#三、找loop
+#    三、找loop
     hicDetectLoops -m matrix.cool -o loops.bedgraph --maxLoopDistance 2000000 --windowSize 10 --peakWidth 6 --pValuePreselection 0.05 --pValue 0.05
