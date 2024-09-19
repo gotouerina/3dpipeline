@@ -24,9 +24,13 @@ Pipeline for 3dgenome analysis
 
 下游的分析考虑用hicexplorer做一下， hicexplore应该可以同时做AB区室， loop， TAD这三大件。hicexplorer读取的事h5和cool格式，cool格式转H5会出现一点问题，所以暂时不转
 
+继续做一些下游处理
+
     cooler balance ref.cool #标准化
     cooler zoomify ref.cool #生成不同窗口大小
+    cooler ls cahirinus.mcool #查看含有的分辨率情况
 
+最后做分析
 
 #    一、A/B区室
     hicPCA -m ref.cool::/resolutions/50000 --outFileName pca1.bw pca2.bw --format bigwig --pearsonMatrix pearson.h5
@@ -41,7 +45,6 @@ Pipeline for 3dgenome analysis
 
 
 
-        cooler ls cahirinus.mcool
-        cooler dump -o output_10kb.cool your_file.mcool::resolutions/10000
-        cooler info output_10kb.cool
+        
+     
 
