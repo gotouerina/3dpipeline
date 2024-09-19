@@ -30,7 +30,7 @@ Pipeline for 3dgenome analysis
     cooler zoomify ref.cool #生成不同窗口大小
     cooler ls cahirinus.mcool #查看含有的分辨率情况
 
-最后做分析
+最后做个性化分析，前面这几步可通过上面写的3dGenomics.pl脚本实现
 
 #    一、A/B区室
     hicPCA -m ref.cool::/resolutions/50000 --outFileName pca1.bw pca2.bw --format bigwig --pearsonMatrix pearson.h5
