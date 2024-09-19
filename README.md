@@ -42,3 +42,11 @@ Pipeline for 3dgenome analysis
 
 #    三、找loop
     hicDetectLoops -m matrix.cool -o loops.bedgraph --maxLoopDistance 2000000 --windowSize 10 --peakWidth 6 --pValuePreselection 0.05 --pValue 0.05
+
+
+
+
+        cooler ls cahirinus.mcool
+        cooler dump -o output_10kb.cool your_file.mcool::resolutions/10000
+        cooler info output_10kb.cool
+
